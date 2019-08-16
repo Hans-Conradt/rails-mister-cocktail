@@ -7,23 +7,14 @@
 
 
   <div class="card" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
+    <img src="https://images.unsplash.com/photo-1501594941583-afe28dd654b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjU2MDh9&auto=format&fit=crop&w=700&q=60" class="card-img-top" alt="">
+
     <div class="card-body">
       <h5 class="card-title"> <%= cocktail.name %></h5>
     </div>
-    <ul class="list-group list-group-flush">
 
-      <% cocktail.doses.each do |dose| %>
-
-      <li class="list-group-item"> <%= dose.ingredient.name %> <%= dose.description %> </li>
-
-      <% end %>
-    </ul>
     <div class="card-body">
-      <%= link_to "Delete Cocktail", cocktail_path(cocktail), method: :destroy %>
-
-      <%= link_to "Add Ingredient", new_cocktail_dose_path(cocktail) %>
-      <%= link_to "Edit", cocktail_path(cocktail) %>
+      <%= link_to "show", cocktail_path(cocktail) %>
     </div>
   </div>
 

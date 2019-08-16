@@ -1,8 +1,8 @@
 <div class="container">
 
-<h1>Cocktail</h1>
+<h1><%= @cocktail.name %></h1>
 
-<%= @cocktail.name %>
+
 
 <ul class="list-group list-group-flush">
 
@@ -12,8 +12,11 @@
 
       <% end %>
     </ul>
+<div>
+      <div class="row"><%= link_to "Edit cocktail", new_cocktail_dose_path(@cocktail) %></div>
+      <div class="row"><%= link_to "Delete cocktail", cocktail_path(@cocktail), method: :delete,
+        data: { confirm: "Are you sure?" }%></div>
+        <div class="row"><%= link_to "Back to cocktails", cocktails_path %></div>
+      </div>
 
-      <%= link_to "EDIT Cocktail", edit_cocktail_path(@cocktail) %>
-
-<%= link_to "SEE ALL cocktails", cocktails_path %>
 </div>

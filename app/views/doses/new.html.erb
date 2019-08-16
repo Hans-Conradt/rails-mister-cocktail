@@ -1,5 +1,12 @@
 <div class="container">
-  <h1>New Ingredient</h1>
+
+  <h1><%=@cocktail.name  %></h1>
+
+<%= form_for @cocktail do |f| %>
+    <%= f.text_field :name %>
+    <%= f.submit "submit" %>
+
+<% end %>
 
   <% if @dose.errors.any? %>
     <div class="errors-container">
