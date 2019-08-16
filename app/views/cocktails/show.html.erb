@@ -12,7 +12,7 @@
 
       <% end %>
     </ul>
-<%= link_to "Delete Cocktail", cocktails_path(@cocktail.destroy) %>
+<%= link_to "Delete Cocktail", cocktails_path(@cocktail), method: :destroy %>
 <%= link_to "EDIT Cocktail", edit_cocktail_path(@cocktail) %>
 <%= link_to "SEE ALL cocktails", cocktails_path %>
 </div>
