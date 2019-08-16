@@ -1,0 +1,18 @@
+<div class="container">
+
+<h1>Cocktail</h1>
+
+<%= @cocktail.name %>
+
+<ul class="list-group list-group-flush">
+
+      <% @cocktail.doses.each do |dose| %>
+
+      <li class="list-group-item"> <%= dose.ingredient.name %> <%= dose.description %> </li>
+
+      <% end %>
+    </ul>
+
+<%= link_to "EDIT Cocktail", edit_cocktail_path(@cocktail) %>
+<%= link_to "SEE ALL cocktails", cocktails_path %>
+</div>
