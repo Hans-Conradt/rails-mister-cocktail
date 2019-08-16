@@ -1,13 +1,13 @@
-<div class="container">
+<div class="container" width="100%">
 
   <h1>Cocktails</h1>
+  <%= cl_image_tag("bridge",
+      width: 400, height: 300, crop: :fill) %>
 <div class="cards" style="grid-template-columns: 1fr 1fr 1fr 1fr; display: grid; grid-gap: 16px;">
   <% @cocktails.each do |cocktail| %>
 
-
-
   <div class="card" style="width: 18rem;">
-    <img src="https://images.unsplash.com/photo-1501594941583-afe28dd654b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjU2MDh9&auto=format&fit=crop&w=700&q=60" class="card-img-top" alt="">
+  <%= cl_image_tag cocktail.photo, height: 300, width: 400, crop: :fill, class: "card-img-top"%>
 
     <div class="card-body">
       <h5 class="card-title"> <%= cocktail.name %></h5>

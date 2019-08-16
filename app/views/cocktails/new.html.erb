@@ -13,6 +13,9 @@
   <%= simple_form_for @cocktail do |f| %>
   <%= f.text_field :name %>
 
-  <%= f.submit "submit" %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+
+  <%= f.submit "submit",type: "button", class: "btn btn-warning" %>
   <% end %>
 </div>
