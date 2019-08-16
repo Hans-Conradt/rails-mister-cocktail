@@ -20,10 +20,10 @@
       <% end %>
     </ul>
     <div class="card-body">
+      <%= link_to "Delete Cocktail", cocktail_path(cocktail), method: :destroy %>
 
-
-
-      <%= link_to "Edit", edit_cocktail_path(cocktail) %>
+      <%= link_to "Add Ingredient", new_cocktail_dose_path(cocktail) %>
+      <%= link_to "Edit", cocktail_path(cocktail) %>
     </div>
   </div>
 
